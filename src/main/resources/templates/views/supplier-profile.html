@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/client/styles/supplier-profile.css">
+    <title>Services</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <script src="https://kit.fontawesome.com/6cb58dcda6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+</head>
+
+
+
+    <body class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!--Logo-->
+            <div class="header__logo">
+                <img class="pag__image" src="/client/assets/logo.png" alt="logopag" />
+                <a href="/client/index.html"><span class="pag__name">SkillConnect</span></a>
+            </div>
+            <ul class="side-menu">
+                <li>
+                    <a href="/client/index.html" class="aside__link"><i
+                            class="fa-solid fa-house aside-icon show"></i>Home</a>
+                </li>
+                <li>
+                    <a href="/client/views/explore.html" class="aside__link"><i
+                            class="fa-solid fa-compass aside-icon"></i>Explore</a>
+                </li>
+                <li>
+                    <a href="/client/views/saved.html" class="aside__link"><i
+                            class="fa-solid fa-bookmark aside-icon"></i>Saved</a>
+                </li>
+                <li>
+                    <a href="/client/views/plans.html" class="aside__link"><i
+                            class="fa-solid fa-crown aside-icon"></i>Plans</a>
+                </li>
+                <li>
+                    <a href="/client/views/history.html" class="aside__link"><i
+                            class="fa-solid fa-clock-rotate-left aside-icon"></i>History</a>
+                </li>
+                <li>
+                    <a href="/client/views/about.html" class="aside__link"><i
+                            class="fa-solid fa-users aside-icon"></i>About</a>
+                </li>
+            </ul>
+
+            <!--Card add-->
+            <section class="aside__card">
+               <article class="extra__left__card active" >
+                <figure class="card__add">
+                    <a href="/client/views/add--publication.html"><i class="fa-solid fa-plus logo-add"></i></a>
+                </figure>
+
+            </article>
+                <article class="extra__card">
+                    <h2 class="card__title">Share Your Skills</h2>
+                    <main class="sub__extra_card">
+                    <p class="card__text">
+                        Share your services, experience and rates. In this way other users can
+                        find you and work together using your talents.
+                    </p>
+                    <button class="card__button">Add Publication</button>
+                </main>
+                </article>
+            </section>
+
+        </aside>
+        <!-- End of Sidebar -->
+
+        <!-- Navbar -->
+        <header class="header">
+            <nav class="header__nav">
+                <!--Settings icon-->
+                <i class="bx bx-menu"></i>
+                <!-- Page name and description  -->
+                <div class="header__navigation-text">
+                    <h1 class="header__title">Services</h1>
+                    <h2 class="header__subtitle">Add a publication</h2>
+                </div>
+
+                <!--service search bar-->
+
+                <form action="#">
+                    <div class="form-input">
+                        <input type="search" placeholder="Search..." />
+                        <button class="search-btn" type="submit">
+                            <i class="bx bx-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!--alerts and profile picture-->
+                <div class="header__alerts">
+                    <div class="alerts__icon">
+                        <a href="#"><i class="fa-regular fa-bell alerts-icon"></i></a>
+                    </div>
+                    <div class="alerts__icon">
+                        <a href="#"><i class="fa-regular fa-envelope alerts-icon"></i></a>
+                    </div>
+                    <div class="alerts__icon">
+                        <a class="cc" href="./views/profile.html"><img class="picture-user"
+                                src="/client/assets/perfil1.jpg" alt="foto de usuario" /></a>
+                    </div>
+                </div>
+
+                <!---Toggle button---->
+
+                <input type="checkbox" id="theme-toggle" hidden />
+                <label for="theme-toggle" class="theme-toggle"></label>
+            </nav>
+        </header>
+
+        <!-- End of Navbar -->
+        <main class="main">
+            <!-- Banner de perfil de usuario -->
+            <section class="main__container">
+                <picture class="banner">
+        
+                    <figure class="avatar-perfil">
+                        <button id="avatar-perfil--button" type=""><i class="fa-solid fa-star"></i> 4.9 </button>
+                        <img src="/img/profile/profile.png" alt="img">
+                        <a href="#" class="cambiar-foto">
+                            <i class="fas fa-camera"></i>
+                            <span>Change Photo</span>
+                        </a>
+        
+                    </figure>
+                    <button type=""><i class="fas fa-wrench"></i>Change Banner</button>
+                </picture>
+                <section class="datos-perfil">
+                    <article class="titulo-usuario">
+                        <h4>Maite Delgado</h4>
+                        <a href="#" class="bio-usuario">@maite.delgado</a>
+                    </article>
+                    <article class="lista-perfil">
+                        <button class="message-profile " type=""><i class="fa-regular fa-envelope alerts-icon"></i>
+                            Send message </button>
+                        <button class="follow-profile" type=""> Seguir </button>
+                        <button class="follow-profile" type="">Seguidores | 1k </button>
+                    </article>
+        
+                </section>
+             <section class="container-content">
+                <article class="contenedor-perfil">
+                    <div class="portada-perfil">
+                    </div> 
+                    <article class="servicios__container">
+                        
+                            <div class="servicios-ubicacion">
+                                <h3> Servicios </h3>
+                                <a href="#"><span class="ubicacion">Medellín, Colombia</span></a>
+                            </div>
+                            <div class="detalle-servicios">
+                                <ul class="lista-servicios">
+                                    <li>Maquillaje de día</li>
+                                    <li>Maquillaje de efectos especiales</li>
+                                    <li>Maquillaje de pasarela</li>
+                                    <li>Maquillaje de noche</li>
+                                    <li>Maquillaje de novia</li>
+                                    <li>Maquillaje de sesión fotográfica</li>
+                                    <li>Maquillaje de televisión y cine</li>
+                                </ul>
+                            </div>
+                            <div class="enlace-redes">
+                                <a href="#"><img src="/img/profile/icons/facebook.svg"></a>
+                                <a href="#"><img src="/img/profile/icons/instagram.svg"></a>
+                                <a href="#"><img src="/img/profile/icons/linkedin.svg"></a>
+                                <a href="#"><img src="/img/profile/icons/icons8-gmail-100.svg"></a>
+                            </div>
+                    </article>
+                </article>
+        
+        
+                <article class="publicacion">
+                    <div class="cont-publicacion">
+                        <p class="caption">
+                        <h6 class="arroba">@maite.delgado</h6> otro dias especial, haciendo feliz a mis clientas</p>
+                        <span class="reacciones"><i class="fa-solid fa-face-kiss-wink-heart"></i></span>
+                    </div>
+                    <div class="img-publicacion">
+                        
+                        <img src="https://www.okchicas.com/wp-content/uploads/2017/11/maquillaje-ojos-tutoriales-730x381.jpg"
+                            alt="">
+                    </div>
+                    <div class="comentario">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYS164-xau6ek2pBGXYlBLyowEIfXdYQuq67wtNrM6ykzteqMXi9zw1atwxE3w3nuBwdU&usqp=CAU"
+                            alt="">
+                        <label for="" placeholder="">Ingresa tu comentario</label>
+                        <button class="enviar"><i class="fa-regular fa-paper-plane"></i></button>
+                        <p class="guardar"><i class="fa-regular        fa-bookmark"></i> Guardar publicacion</p>
+                    </div>
+                </article>
+                <article class="descripcion">
+                    <div class="calendario">
+                    <h5>Sobre mi</h5>
+                    <h6>Maquilladora</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, distinctio.</p>
+                    <a href="#">Se ha unido, junio 2023</a>
+                </div>
+        
+                     
+                    <img src="/img/profile/calendario.png" alt="calendario">
+                
+                </article>
+            </section>
+            </section>
+            <script src="/client/public/plantilla.js"></script>
+            <script src="/client/scripts/Card--service.js"></script>
+        
+        </main>
+
+    </body>
+</html>
+

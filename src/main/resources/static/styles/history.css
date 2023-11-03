@@ -1,0 +1,70 @@
+/*Ctrl+shift+p > html*/
+@import url('/static/public/style.css');
+
+.history--card {
+    height: 20svh;
+    width: 72vw;
+    background-color: rgba(8, 183, 169, 0.838);
+    border-radius: 0.7rem;
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    row-gap: 2rem;
+    border: 0.2rem solid var( --black-color);
+}
+.img--Profile > img{
+    width: 9svw;
+    min-height: 15svh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.history--card--info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    width: 20svw;
+    text-align: left;
+}
+.card--title {
+    color: black;
+}
+.cardUser {
+    font-style: italic;
+}
+.card--stateOne {
+    font-weight:500;
+    width: auto;
+}
+.card--state{
+    color:blue;
+    width: auto;
+}
+.sortService {
+    font-weight: 500;
+}
+.aside--Card {
+    width: 50svw;
+    height: auto;
+    text-align: end;
+
+}
+.card--Price {
+    font-weight:700;
+    transform: translateX(-10%);
+}
+.card--buttons {
+    padding-top: 5svh;
+    align-items:start;
+
+
+}
+.card--buttons > button{
+    background-color: var(--highlight-color);
+    border-radius: 0.3rem;
+    color:var(--white-color);
+    cursor: pointer;
+    padding: 0.2rem;
+}
