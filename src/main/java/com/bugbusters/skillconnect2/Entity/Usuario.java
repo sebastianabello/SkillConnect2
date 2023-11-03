@@ -18,7 +18,15 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String email;
-    private String contrasenia;
+    private String contraseña;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fecha_creacion")

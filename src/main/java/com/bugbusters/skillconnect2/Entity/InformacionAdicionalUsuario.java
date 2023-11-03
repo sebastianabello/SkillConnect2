@@ -22,6 +22,14 @@ public class InformacionAdicionalUsuario {
     private String direccion;
     private String celular;
 
+    public Long getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(Long usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+
     @OneToOne
     @JoinColumn(name = "usuarioId")
     private Usuario usuario;
