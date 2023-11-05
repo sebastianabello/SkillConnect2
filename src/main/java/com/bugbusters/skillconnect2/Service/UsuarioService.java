@@ -12,16 +12,21 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public List<Usuario> obtenerTodosLosUsuarios() {
-        return usuarioRepository.findAll();
+    public Usuario crearUsuario(Usuario usuario) {
+        // Agregar lógica de validación o encriptación de contraseña si es necesario
+        return usuarioRepository.save(usuario);
     }
 
     public Usuario obtenerUsuarioPorId(Long id) {
         return usuarioRepository.findById(id).orElse(null);
     }
 
-    public void guardarUsuario(Usuario usuario) {
-        usuarioRepository.save(usuario);
+    public Usuario obtenerUsuarioPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
+
+    public List<Usuario> obtenerTodosLosUsuarios() {
+        return usuarioRepository.findAll();
     }
 
     public void eliminarUsuario(Long id) {

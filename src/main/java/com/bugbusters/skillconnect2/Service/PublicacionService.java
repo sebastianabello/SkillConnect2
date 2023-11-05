@@ -1,6 +1,8 @@
 package com.bugbusters.skillconnect2.Service;
 
+import com.bugbusters.skillconnect2.Entity.Categoria;
 import com.bugbusters.skillconnect2.Entity.Publicacion;
+import com.bugbusters.skillconnect2.Entity.Usuario;
 import com.bugbusters.skillconnect2.Repository.PublicacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,16 +14,21 @@ public class PublicacionService {
     @Autowired
     private PublicacionRepository publicacionRepository;
 
-    public List<Publicacion> obtenerTodasLasPublicaciones() {
-        return publicacionRepository.findAll();
+    public Publicacion crearPublicacion(Publicacion publicacion) {
+        // Agregar lógica adicional si es necesario
+        return publicacionRepository.save(publicacion);
     }
 
     public Publicacion obtenerPublicacionPorId(Long id) {
         return publicacionRepository.findById(id).orElse(null);
     }
 
-    public void guardarPublicacion(Publicacion publicacion) {
-        publicacionRepository.save(publicacion);
+    public List<Publicacion> obtenerPublicacionesPorCategoria(Categoria categoria) {
+        return publicacionRepository.findByCategoria(categoria);
+    }
+
+    public List<Publicacion> obtenerPublicacionesPorUsuario(Usuario usuario) {
+        return publicacionRepository.findByUsuario(usuario);
     }
 
     public void eliminarPublicacion(Long id) {

@@ -12,7 +12,16 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
+    public Categoria crearCategoria(Categoria categoria) {
+        // Agregar lógica adicional si es necesario
+        return categoriaRepository.save(categoria);
+    }
+
     public List<Categoria> obtenerTodasLasCategorias() {
         return categoriaRepository.findAll();
+    }
+
+    public Categoria obtenerCategoriaPorId(Long id) {
+        return categoriaRepository.findById(id).orElse(null);
     }
 }

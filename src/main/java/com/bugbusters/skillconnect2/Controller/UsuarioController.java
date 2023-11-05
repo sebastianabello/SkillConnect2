@@ -8,14 +8,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/api/usuarios")
 public class UsuarioController {
+
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping
-    public List<Usuario> obtenerTodosLosUsuarios() {
-        return usuarioService.obtenerTodosLosUsuarios();
+    @PostMapping
+    public Usuario crearUsuario(@RequestBody Usuario usuario) {
+        return usuarioService.crearUsuario(usuario);
     }
 
     @GetMapping("/{id}")
@@ -23,9 +24,14 @@ public class UsuarioController {
         return usuarioService.obtenerUsuarioPorId(id);
     }
 
-    @PostMapping
-    public void guardarUsuario(@RequestBody Usuario usuario) {
-        usuarioService.guardarUsuario(usuario);
+    @GetMapping("/email/{email}")
+    public Usuario obtenerUsuarioPorEmail(@PathVariable String email) {
+        return usuarioService.obtenerUsuarioPorEmail(email);
+    }
+
+    @GetMapping
+    public List<Usuario> obtenerTodosLosUsuarios() {
+        return usuarioService.obtenerTodosLosUsuarios();
     }
 
     @DeleteMapping("/{id}")
